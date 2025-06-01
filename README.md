@@ -4,6 +4,8 @@
 
 SAR Beacon is an advanced IoT-based solution developed to assist in emergency search and rescue operations. By integrating real-time location tracking, health monitoring, long-range communication, and automated alerts, this system ensures faster, data-driven responses in life-critical scenarios.
 
+![Product](Screenshots/IMG_4736.JPG)
+
 ---
 
 ## 🔍 Key Features
@@ -62,7 +64,7 @@ SAR-Beacon/<br>
 ## 📸 Screenshots
 
 ### Hardware Prototype
-<img src="Screenshots/IMG_4736.JPG" alt="Hardware" width="400"/>
+<img src="Screenshots/IMG_4820.JPG" alt="Hardware" width="400"/>
 
 ### Live Monitoring Dashboard
 <img src="Screenshots/IMG_4742.JPG" alt="Web UI" width="400"/>
