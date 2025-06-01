@@ -62,11 +62,10 @@ SAR-Beacon/<br>
 ## 📸 Screenshots
 
 ### Hardware Prototype
-![Hardware](Screenshots/IMG_4736.JPG)
+<img src="Screenshots/IMG_4736.JPG" alt="Hardware" width="400"/>
 
 ### Live Monitoring Dashboard
-![Web UI](Screenshots/IMG_4742.JPG)
-
+<img src="Screenshots/IMG_4742.JPG" alt="Web UI" width="400"/>
 
 ---
 
