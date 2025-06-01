@@ -1,0 +1,20 @@
+<div style="width: 100%; max-width: 400px; margin: 0 auto; padding: 20px; text-align: center;">
+    <h2 style="color: #333;">Real-Time GPS Coordinates</h2>
+    <div id="gpsData" style="font-size: 1.5em;">
+        Latitude: <span id="latitudeValue">--</span> <br>
+        Longitude: <span id="longitudeValue">--</span>
+    </div>
+</div>
+<script>
+    // Fetch GPS data
+    async function fetchGPSData() {
+        const response = await fetch('https://sarbeacon.infinityfreeapp.com/devicedata.php');
+        const data = await response.json();
+        document.getElementById("latitudeValue").innerText = data.latitude;
+        document.getElementById("longitudeValue").innerText = data.longitude;
+    }
+
+    // Call fetchGPSData periodically
+    setInterval(fetchGPSData, 5000);
+    fetchGPSData(); // Initial call
+</script>

@@ -1,0 +1,25 @@
+<div style="width: 100%; max-width: 400px; margin: 0 auto; padding: 20px; text-align: center;">
+    <div id="welcomeMessage" style="font-size: 1.5em; color: #500;">
+        Welcome, <span id="userName">Guest</span>! <br> Let’s take a look at your Health Status & Location
+    </div>
+</div>
+<script>
+    // Fetch user information for welcome message
+    async function fetchUserInfo() {
+        try {
+            const response = await fetch('https://sarbeacon.infinityfreeapp.com/devicedata.php');
+            const data = await response.json();
+
+            if (data.userInfo) {
+                const firstName = data.userInfo.firstName || "Guest";
+                const lastName = data.userInfo.lastName || "";
+                document.getElementById("userName").innerText = `${firstName} ${lastName}`.trim();
+            }
+        } catch (error) {
+            console.error("Error fetching user info:", error);
+        }
+    }
+
+    // Call fetchUserInfo on load
+    fetchUserInfo();
+</script>

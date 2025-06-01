@@ -1,0 +1,20 @@
+<div style="width: 100%; max-width: 400px; margin: 0 auto; padding: 20px; text-align: center;">
+    <h2 style="color: #333;">Real-Time Health Data</h2>
+    <div id="healthData" style="font-size: 1.5em;">
+        Heart Rate: <span id="heartRateValue">--</span> BPM <br>
+        SPO2: <span id="spo2Value">--</span> %
+    </div>
+</div>
+<script>
+    // Fetch heart rate and SPO2 data
+    async function fetchHealthData() {
+        const response = await fetch('https://sarbeacon.infinityfreeapp.com/devicedata.php');
+        const data = await response.json();
+        document.getElementById("heartRateValue").innerText = data.heart_rate;
+        document.getElementById("spo2Value").innerText = data.spo2;
+    }
+
+    // Call fetchHealthData periodically
+    setInterval(fetchHealthData, 5000);
+    fetchHealthData(); // Initial call
+</script>
